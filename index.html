@@ -280,14 +280,7 @@
     text-align: center;
   }
 
-  .quote-mark {
-    font-family: 'Fraunces', serif;
-    font-size: 80px;
-    line-height: 1;
-    color: var(--coral);
-    opacity: 0.4;
-    margin-bottom: -20px;
-  }
+  
 
   blockquote {
     font-family: 'Fraunces', serif;
@@ -618,13 +611,14 @@
       inset 0 0 0 2px rgba(255, 255, 255, 0.08);
   }
 
-  .phone-screenshot {
+   .phone-screenshot {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
     border-radius: 38px;
     display: block;
+    background: #fbf2e3;
   }
 
   .final-cta {
@@ -822,7 +816,7 @@
 
   <section class="quote-section">
     <div class="quote">
-      <div class="quote-mark">"</div>
+      
       <blockquote>
         Your life is full of moments you'll <em>forget</em>—unless something remembers them for you.
       </blockquote>
