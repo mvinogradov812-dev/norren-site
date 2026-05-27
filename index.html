@@ -280,8 +280,6 @@
     text-align: center;
   }
 
-  
-
   blockquote {
     font-family: 'Fraunces', serif;
     font-size: clamp(28px, 4vw, 44px);
@@ -457,10 +455,11 @@
   }
 
   .privacy-icon {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     margin-bottom: 24px;
     color: var(--coral);
+    display: block;
   }
 
   .privacy-pillar h3 {
@@ -496,6 +495,8 @@
     border-radius: 28px;
     padding: 40px;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .price-card.featured {
@@ -574,8 +575,63 @@
     font-style: italic;
     font-size: 14px;
     color: var(--ink-mute);
-    margin-top: 28px;
+    margin-top: auto;
+    padding-top: 28px;
     line-height: 1.5;
+  }
+
+  .faq-sec {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .faq-list {
+    max-width: 780px;
+  }
+
+  details {
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+  }
+
+  details:first-of-type { border-top: 1px solid var(--line); }
+
+  summary {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 400;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    transition: color 0.2s;
+    gap: 24px;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { color: var(--coral); }
+
+  summary::after {
+    content: "+";
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: var(--ink-mute);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+
+  details[open] summary::after { content: "−"; }
+
+  details p {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    max-width: 660px;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .showcase {
@@ -597,7 +653,7 @@
     align-items: center;
   }
 
- .phone {
+  .phone {
     position: relative;
     max-width: 320px;
     margin: 0 auto;
@@ -762,7 +818,7 @@
     }
     nav { padding: 24px 0; }
     .nav-links { gap: 20px; }
-    .examples, .privacy-sec, .pricing, .final-cta { padding: 80px 0; }
+    .examples, .privacy-sec, .pricing, .faq-sec, .final-cta { padding: 80px 0; }
   }
 </style>
 </head>
@@ -776,6 +832,7 @@
       <a href="#how">How it works</a>
       <a href="#examples">Examples</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a href="/privacy.html">Privacy</a>
     </div>
   </nav>
@@ -812,7 +869,6 @@
 
   <section class="quote-section">
     <div class="quote">
-      
       <blockquote>
         Your life is full of moments you'll <em>forget</em>—unless something remembers them for you.
       </blockquote>
@@ -907,15 +963,16 @@
 
     <div class="privacy-grid">
       <div class="privacy-pillar">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M5 11V7a7 7 0 0 1 14 0v4M5 11h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1z"/>
+        <svg class="privacy-icon" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="11" width="16" height="13" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
         </svg>
         <h3>Stored on your device.</h3>
         <p>Every memory, transcript, and insight lives on your iPhone. Not in the cloud. Not on our servers. Not in any database we control.</p>
       </div>
 
       <div class="privacy-pillar">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="9"/>
           <path d="M12 7v5l3 2"/>
         </svg>
@@ -924,7 +981,7 @@
       </div>
 
       <div class="privacy-pillar">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
         </svg>
         <h3>Yours to delete.</h3>
@@ -961,8 +1018,44 @@
           <li class="price-feature">Spending &amp; health summaries</li>
           <li class="price-feature">"On this day" callbacks</li>
         </ul>
-        <p class="price-note">The real magic. Cancel anytime.</p>
+        <p class="price-note">Founding member pricing — yours stays the same as Norren grows.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="faq-sec" id="faq">
+    <div class="eyebrow">Questions</div>
+    <h2 class="section-title">Things people<br>ask <em>first.</em></h2>
+
+    <div class="faq-list">
+      <details>
+        <summary>Is Norren a journaling app?</summary>
+        <p>Not exactly. Journals are for writing about how you feel. Norren is for remembering what happened — appointments, expenses, conversations, ideas — and finding any of it again. Think of it less like a diary and more like a search engine for your own life.</p>
+      </details>
+      <details>
+        <summary>What languages does it understand?</summary>
+        <p>English and Russian, including code-switching mid-sentence. More languages coming.</p>
+      </details>
+      <details>
+        <summary>How do I join the beta?</summary>
+        <p>Apply through the button below. We're letting in the first hundred testers gradually — when you're approved, you'll get a TestFlight invitation in your email.</p>
+      </details>
+      <details>
+        <summary>What does it cost after launch?</summary>
+        <p>Free forever with unlimited memories and 3 AI questions. Premium is $6.99/month or $49.99/year for unlimited AI and Insights. Early supporters keep founding pricing.</p>
+      </details>
+      <details>
+        <summary>Is my voice data private?</summary>
+        <p>Yes. Recordings and transcripts stay on your iPhone. AI features process transcript text only — never your audio, never linked to your identity. Full details in our Privacy Policy.</p>
+      </details>
+      <details>
+        <summary>Is there an Android version?</summary>
+        <p>Not yet. Norren is built natively for iOS first. Apply for the beta and let us know if Android matters to you.</p>
+      </details>
+      <details>
+        <summary>Who's behind this?</summary>
+        <p>One developer who wanted a search engine for his own life — and finally built one.</p>
+      </details>
     </div>
   </section>
 
@@ -991,6 +1084,7 @@
         <a href="#how">How it works</a>
         <a href="#examples">Examples</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="#join">Apply for beta</a>
       </div>
       <div class="footer-col">
