@@ -786,39 +786,86 @@
     50% { transform: translate(20px, -30px); }
   }
 
+  /* ---------- TABLET ---------- */
   @media (max-width: 880px) {
     .hero {
       grid-template-columns: 1fr;
-      gap: 60px;
-      padding: 40px 0 80px;
+      gap: 48px;
+      padding: 32px 0 72px;
+      min-height: auto;
+      text-align: center;
     }
-    .hero-visual { height: 320px; }
+    .hero-text { display: flex; flex-direction: column; align-items: center; }
+    .hero .lead { margin-left: auto; margin-right: auto; }
+    .hero .eyebrow { justify-content: center; }
+    .hero .cta-row { justify-content: center; }
+    .hero-visual { height: 300px; order: -1; }
     .feature-grid,
     .example-grid,
     .price-grid {
       grid-template-columns: 1fr;
       gap: 24px;
     }
-    .feature-grid { gap: 48px; }
+    .feature-grid { gap: 44px; }
     .privacy-grid {
       grid-template-columns: 1fr;
       gap: 36px;
     }
     .showcase-inner {
       grid-template-columns: 1fr;
-      gap: 60px;
+      gap: 48px;
     }
     .footer-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 32px;
     }
+    .footer-tag { grid-column: 1 / -1; }
     .footer-bottom {
       flex-direction: column;
       gap: 12px;
     }
     nav { padding: 24px 0; }
-    .nav-links { gap: 20px; }
+    .nav-links { display: none; }
+    .section-title { margin-bottom: 56px; }
     .examples, .privacy-sec, .pricing, .faq-sec, .final-cta { padding: 80px 0; }
+    .quote-section { padding: 80px 0; }
+  }
+
+  /* ---------- PHONE ---------- */
+  @media (max-width: 560px) {
+    .wrap { padding: 0 22px; }
+    .showcase { margin: 0 -22px; padding-left: 22px; padding-right: 22px; }
+
+    h1 { margin-bottom: 24px; }
+    .hero .lead { font-size: 17px; margin-bottom: 36px; }
+    .hero { gap: 40px; padding: 24px 0 56px; }
+    .hero-visual { height: 240px; }
+    .orb, .orb-shadow { width: 300px; }
+
+    .beta-tag { font-size: 11px; }
+
+    .cta-row { gap: 18px; width: 100%; }
+    .btn-primary { width: 100%; justify-content: center; padding: 16px 24px; }
+    .final-cta .btn-primary { width: auto; }
+
+    .quote-section, .features, .examples, .privacy-sec, .pricing, .faq-sec { padding: 64px 0; }
+    .section-title { font-size: 32px; margin-bottom: 40px; }
+    .examples-intro { margin-top: -24px; font-size: 16px; }
+
+    .feature h3 { font-size: 24px; }
+    .example-card { padding: 26px; }
+    .example-q { font-size: 20px; }
+    .price-card { padding: 32px 26px; }
+
+    .showcase { padding-top: 72px; padding-bottom: 88px; }
+    .final-cta { padding: 88px 0 96px; }
+    .final-cta p { font-size: 16px; }
+
+    summary { font-size: 19px; gap: 16px; }
+    details p { font-size: 15px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-tag { font-size: 20px; }
   }
 </style>
 </head>
@@ -847,7 +894,7 @@
       <h1>Speak it.<br>Remember it. <em>Forever.</em></h1>
       <p class="lead">Norren is the memory you wish your brain had. Talk about your day — appointments, expenses, conversations, ideas — and it remembers everything. Months later, ask in plain English. The answer is there.</p>
       <div class="cta-row">
-        <a href="#join" class="btn-primary">
+        <a href="https://tally.so/r/MePrbE" target="_blank" rel="noopener" class="btn-primary">
           Apply for beta access
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -1064,7 +1111,7 @@
     <h2>Become one of the first<br><em>hundred minds.</em></h2>
     <p>The private beta opens this week. The first hundred testers shape what Norren becomes — and keep early access to every feature we build.</p>
     <div class="cta-row">
-      <a href="#" class="btn-primary" id="apply-btn">
+      <a href="https://tally.so/r/MePrbE" target="_blank" rel="noopener" class="btn-primary" id="apply-btn">
         Apply for beta access
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -1085,7 +1132,7 @@
         <a href="#examples">Examples</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#join">Apply for beta</a>
+        <a href="https://tally.so/r/MePrbE" target="_blank" rel="noopener">Apply for beta</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
