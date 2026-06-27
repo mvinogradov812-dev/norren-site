@@ -1,104 +1,1311 @@
-Norren
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norren — Your Second Memory</title>
+<meta name="description" content="Speak it. Remember it. Forever. Norren is the memory you wish your brain had — search your life by voice.">
+<meta property="og:title" content="Norren — Your Second Memory">
+<meta property="og:description" content="Talk about your day. Norren remembers everything — ask anything, find anything.">
+<meta property="og:url" content="https://norren.app">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5EEDC;
+    --cream-deep: #EDE3CD;
+    --ink: #1C1C1E;
+    --ink-soft: rgba(28, 28, 30, 0.7);
+    --ink-mute: rgba(28, 28, 30, 0.5);
+    --teal: #49C5B6;
+    --rose: #C38D9E;
+    --coral: #DF6C4F;
+    --line: rgba(28, 28, 30, 0.08);
+  }
 
-Private beta · iOS · TestFlight YOUR SECOND MEMORY
-Speak it. Remember it. Forever.
-Norren is the memory you wish your brain had. Talk about your day — appointments, expenses, conversations, ideas — and it remembers everything. Months later, ask in plain English. The answer is there.
-Apply for beta access
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-See how it works →
+  html {
+    scroll-behavior: smooth;
+    background: var(--cream);
+  }
 
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 0% 0%, rgba(195, 141, 158, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(73, 197, 182, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.11 0 0 0 0 0.11 0 0 0 0 0.12 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+  }
 
+  .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
 
+  nav {
+    position: relative;
+    z-index: 10;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-Your life is full of moments you'll forget—unless something remembers them for you.
-A memory that thinks like you do.
-01 / Capture
-Just speak. It writes itself.
-Press the orb. Talk for ten seconds or ten minutes — in English, Russian, or both in the same sentence. Norren transcribes everything and quietly files it away by category.
-02 / Understand
-It extracts what matters.
-Dates. Amounts. Names. Symptoms. Decisions. Claude AI reads each memory the way you would, pulls out what's important, and remembers the context — not just the words.
-03 / Recall
-Ask anything. Find anything.
-"When was my last ultrasound?" "How much on coffee last month?" Norren answers from your own words, with dates, numbers, and context intact.
-04 / Reflect
-Weekly insights, written by AI.
-Every week, a quiet digest of your patterns: where your money went, who you saw, what kept coming up. Not advice. Just clarity.
-WHAT YOU CAN ASK
-Your life, indexed.
-Whatever you mentioned in passing, Norren remembers. Ask it back whenever you need it.
-HEALTH
-"When was the last time I had an ultrasound?"
-You had an ultrasound of your abdomen and kidneys on April 21, 2026. You mentioned it on May 15 when noting blood and urine tests on April 20.
-SPENDING
-"How much on restaurants this week?"
-$2,500 across Cafes & Restaurants — a 65% decrease vs last week. Pulled from your voice entries.
-PEOPLE
-"What did I give my colleague for her birthday?"
-You gave Sarah a leather notebook on March 8. You mentioned the next week that she liked it.
-ROUTINES
-"When did I finish my last vitamin course?"
-You finished your B-complex course on April 12. You also said you wanted to restart in June.
-Built for the moments you'd rather not lose.
-The trip you took. The medicine you tried. The friend you called. The thought you had at 2am. Norren remembers, so you don't have to.
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+  }
 
-PRIVACY
-Your memories are yours.
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
 
-Stored on your device.
-Every memory, transcript, and insight lives on your iPhone. Not in the cloud. Not on our servers. Not in any database we control.
+  .nav-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
 
-AI without identity.
-When Norren queries Claude, it sends transcript text only — never your name, account, or audio. Nothing is linked back to you.
+  .nav-links a:hover { color: var(--coral); }
 
-Yours to delete.
-Delete a memory and it's gone — from your device, from any cache, immediately. There's no recovery, no backup we can access.
-PRICING
-Free to start. Worth it to keep.
-FREE
-$0
-forever
-	•	Unlimited voice memories Full calendar & history 3 AI questions, ever
-Use Norren as a memory archive — no charge, no time limit.
-PREMIUM
-$6.99
-per month · or $49.99/year
-	•	Everything in Free Unlimited AI questions about your past Weekly Insights & digests Spending & health summaries "On this day" callbacks
-Founding member pricing — yours stays the same as Norren grows.
-QUESTIONS
-Things people ask first.
-Is Norren a journaling app?
-Not exactly. Journals are for writing about how you feel. Norren is for remembering what happened — appointments, expenses, conversations, ideas — and finding any of it again. Think of it less like a diary and more like a search engine for your own life.
-What languages does it understand?
-English and Russian, including code-switching mid-sentence. More languages coming.
-How do I join the beta?
-Apply through the button below. We're letting in the first hundred testers gradually — when you're approved, you'll get a TestFlight invitation in your email.
-What does it cost after launch?
-Free forever with unlimited memories and 3 AI questions. Premium is $6.99/month or $49.99/year for unlimited AI and Insights. Early supporters keep founding pricing.
-Is my voice data private?
-Yes. Recordings and transcripts stay on your iPhone. AI features process transcript text only — never your audio, never linked to your identity. Full details in our Privacy Policy.
-Is there an Android version?
-Not yet. Norren is built natively for iOS first. Apply for the beta and let us know if Android matters to you.
-Who's behind this?
-One developer who wanted a search engine for his own life — and finally built one.
-BE EARLY
-Become one of the first hundred minds.
-The private beta opens this week. The first hundred testers shape what Norren becomes — and keep early access to every feature we build.
-Apply for beta access
+  .hero {
+    padding: 80px 0 120px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+    min-height: 80vh;
+  }
 
-We review applications within 48 hours.
-Norren is your second memory—a quiet, private place where everything you've ever said is waiting to be found.
-PRODUCT
-How it works
-Examples
-Pricing
-FAQ
-Apply for beta
-COMPANY
-Privacy Policy
-Terms of Use
-Contact
-© 2026 Norren. All rights reserved.
-Made with care.
+  .hero-text {
+    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--coral);
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--coral);
+    font-weight: 400;
+  }
+
+  .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin-bottom: 48px;
+  }
+
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: var(--ink);
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--coral);
+    transform: translateY(-2px);
+  }
+
+  .btn-text {
+    font-size: 14px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-text:hover {
+    color: var(--coral);
+    border-color: var(--coral);
+  }
+
+  .beta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    background: rgba(73, 197, 182, 0.12);
+    border: 1px solid rgba(73, 197, 182, 0.3);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--ink);
+    margin-bottom: 28px;
+    letter-spacing: 0.4px;
+  }
+
+  .beta-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 8px rgba(73, 197, 182, 0.6);
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+
+  .hero-visual {
+    position: relative;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeUp 1.4s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .orb {
+    position: relative;
+    width: 420px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(circle at 35% 35%,
+      rgba(73, 197, 182, 0.95) 0%,
+      rgba(73, 197, 182, 0.7) 30%,
+      rgba(195, 141, 158, 0.3) 70%,
+      transparent 100%);
+    border-radius: 50%;
+    filter: blur(0.5px);
+    animation: pulse 6s ease-in-out infinite;
+  }
+
+  .orb-shadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(28, 28, 30, 0.06) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  .dot-1 { top: 10%; left: 20%; background: var(--coral); animation: float 8s ease-in-out infinite; }
+  .dot-2 { top: 30%; right: 10%; background: var(--teal); animation: float 10s ease-in-out infinite 1s; }
+  .dot-3 { bottom: 20%; left: 15%; background: var(--rose); animation: float 7s ease-in-out infinite 2s; }
+  .dot-4 { bottom: 30%; right: 25%; background: var(--coral); animation: float 9s ease-in-out infinite 0.5s; }
+
+  .quote-section {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .quote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  blockquote {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  blockquote em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .features {
+    padding: 120px 0;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 700px;
+    margin-bottom: 80px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--coral);
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px 80px;
+  }
+
+  .feature {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+
+  .feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .feature-num {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: var(--coral);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+
+  .feature h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .feature p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .examples {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .examples-intro {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin-bottom: 64px;
+    margin-top: -40px;
+  }
+
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .example-card {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 32px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .example-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+
+  .example-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(28, 28, 30, 0.06);
+  }
+
+  .example-cat {
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    color: var(--coral);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .example-cat::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+
+  .example-q {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .example-a {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    padding-left: 16px;
+    border-left: 2px solid var(--teal);
+  }
+
+  .privacy-sec {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+
+  .privacy-pillar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+
+  .privacy-pillar.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .privacy-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 24px;
+    color: var(--coral);
+    display: block;
+  }
+
+  .privacy-pillar h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .privacy-pillar p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  .pricing {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .price-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 920px;
+  }
+
+  .price-card {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-card.featured {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+  }
+
+  .price-card.featured .price-feature,
+  .price-card.featured .price-note,
+  .price-card.featured .price-period {
+    color: rgba(245, 238, 220, 0.7);
+  }
+
+  .price-card.featured strong { color: var(--cream); }
+
+  .price-tier {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: var(--coral);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .price-card.featured .price-tier {
+    color: var(--teal);
+  }
+
+  .price-amount {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .price-period {
+    font-size: 14px;
+    color: var(--ink-mute);
+    margin-bottom: 32px;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+
+  .price-feature {
+    font-size: 15px;
+    color: var(--ink-soft);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(28, 28, 30, 0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .price-card.featured .price-feature {
+    border-bottom-color: rgba(245, 238, 220, 0.1);
+  }
+
+  .price-feature:last-child { border-bottom: none; }
+
+  .price-feature::before {
+    content: '·';
+    color: var(--coral);
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .price-note {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
+    margin-top: auto;
+    padding-top: 28px;
+    line-height: 1.5;
+  }
+
+  .faq-sec {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .faq-list {
+    max-width: 780px;
+  }
+
+  details {
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+  }
+
+  details:first-of-type { border-top: 1px solid var(--line); }
+
+  summary {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 400;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    transition: color 0.2s;
+    gap: 24px;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { color: var(--coral); }
+
+  summary::after {
+    content: "+";
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: var(--ink-mute);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+
+  details[open] summary::after { content: "−"; }
+
+  details p {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    max-width: 660px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .showcase {
+    padding: 100px 0 140px;
+    background: var(--cream-deep);
+    margin: 0 -32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .showcase-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .phone {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+    background: #1c1c1e;
+    border-radius: 48px;
+    padding: 10px;
+    box-shadow:
+      0 4px 24px rgba(28, 28, 30, 0.12),
+      0 24px 80px rgba(28, 28, 30, 0.18),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+  }
+
+  .phone-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 38px;
+    display: block;
+  }
+
+  .final-cta {
+    padding: 140px 0 160px;
+    text-align: center;
+  }
+
+  .final-cta .eyebrow {
+    justify-content: center;
+  }
+
+  .final-cta h2 {
+    margin: 0 auto 32px;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 720px;
+  }
+
+  .final-cta h2 em {
+    font-style: italic;
+    color: var(--coral);
+  }
+
+  .final-cta p {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+  }
+
+  .final-cta .cta-row {
+    justify-content: center;
+  }
+
+  .final-cta-meta {
+    margin-top: 28px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
+  }
+
+  footer {
+    padding: 80px 0 60px;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-tag {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    max-width: 360px;
+    line-height: 1.4;
+  }
+
+  .footer-tag em {
+    font-style: italic;
+    color: var(--coral);
+  }
+
+  .footer-col h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--ink-mute);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .footer-col a {
+    display: block;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--coral); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--ink-mute);
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.95; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -30px); }
+  }
+
+  /* ---------- TABLET ---------- */
+  @media (max-width: 880px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      padding: 32px 0 72px;
+      min-height: auto;
+      text-align: center;
+    }
+    .hero-text { display: flex; flex-direction: column; align-items: center; }
+    .hero .lead { margin-left: auto; margin-right: auto; }
+    .hero .eyebrow { justify-content: center; }
+    .hero .cta-row { justify-content: center; }
+    .hero-visual { height: 300px; order: -1; }
+    .feature-grid,
+    .example-grid,
+    .price-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .feature-grid { gap: 44px; }
+    .privacy-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    .showcase-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 32px;
+    }
+    .footer-tag { grid-column: 1 / -1; }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 12px;
+    }
+    nav { padding: 24px 0; }
+    .nav-links { display: none; }
+    .section-title { margin-bottom: 56px; }
+    .examples, .privacy-sec, .pricing, .faq-sec, .final-cta { padding: 80px 0; }
+    .care-grid { grid-template-columns: 1fr !important; }
+    .care-form-row { grid-template-columns: 1fr !important; }
+    .quote-section { padding: 80px 0; }
+  }
+
+  /* ---------- PHONE ---------- */
+  @media (max-width: 560px) {
+    .wrap { padding: 0 22px; }
+    .showcase { margin: 0 -22px; padding-left: 22px; padding-right: 22px; }
+
+    h1 { margin-bottom: 24px; }
+    .hero .lead { font-size: 17px; margin-bottom: 36px; }
+    .hero { gap: 40px; padding: 24px 0 56px; }
+    .hero-visual { height: 240px; }
+    .orb, .orb-shadow { width: 300px; }
+
+    .beta-tag { font-size: 11px; }
+
+    .cta-row { gap: 18px; width: 100%; }
+    .btn-primary { width: 100%; justify-content: center; padding: 16px 24px; }
+    .final-cta .btn-primary { width: auto; }
+
+    .quote-section, .features, .examples, .privacy-sec, .pricing, .faq-sec { padding: 64px 0; }
+    .section-title { font-size: 32px; margin-bottom: 40px; }
+    .examples-intro { margin-top: -24px; font-size: 16px; }
+
+    .feature h3 { font-size: 24px; }
+    .example-card { padding: 26px; }
+    .example-q { font-size: 20px; }
+    .price-card { padding: 32px 26px; }
+
+    .showcase { padding-top: 72px; padding-bottom: 88px; }
+    .final-cta { padding: 88px 0 96px; }
+    .final-cta p { font-size: 16px; }
+
+    summary { font-size: 19px; gap: 16px; }
+    details p { font-size: 15px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-tag { font-size: 20px; }
+  }
+  /* ===== Norren Care (B2B) ===== */
+  .care-sec {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+    background: var(--cream-deep);
+  }
+  .care-lead {
+    max-width: 720px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 56px;
+  }
+  .care-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    max-width: 980px;
+    margin-bottom: 64px;
+  }
+  .care-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 32px;
+  }
+  .care-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .care-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .care-card .care-icon {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: var(--teal);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .care-form-wrap {
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 28px;
+    padding: 48px;
+    max-width: 980px;
+  }
+  .care-form-wrap h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .care-form-wrap p.care-form-sub {
+    color: rgba(245, 238, 220, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 620px;
+  }
+  .care-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .care-form label {
+    display: block;
+    font-size: 13px;
+    color: rgba(245, 238, 220, 0.6);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+  .care-form input,
+  .care-form textarea {
+    width: 100%;
+    background: rgba(245, 238, 220, 0.08);
+    border: 1px solid rgba(245, 238, 220, 0.18);
+    border-radius: 14px;
+    padding: 14px 16px;
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  .care-form input:focus,
+  .care-form textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+  }
+  .care-form textarea { min-height: 96px; resize: vertical; }
+  .care-form .care-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0 28px;
+    font-size: 13px;
+    color: rgba(245, 238, 220, 0.6);
+    line-height: 1.5;
+  }
+  .care-form .care-consent input { width: auto; margin-top: 3px; }
+  .care-form .care-consent a { color: var(--teal); }
+  .care-submit {
+    background: var(--teal);
+    color: var(--ink);
+    border: none;
+    border-radius: 100px;
+    padding: 16px 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .care-submit:hover { opacity: 0.85; }
+
+  .nav-care-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    background: var(--teal);
+    color: var(--ink) !important;
+    border-radius: 100px;
+    font-weight: 600 !important;
+    font-size: 14px;
+    margin-left: 8px;
+    transition: transform 0.2s, background 0.2s, opacity 0.2s;
+  }
+  .nav-care-btn:hover {
+    background: var(--teal);
+    opacity: 0.85;
+    transform: translateY(-1px);
+    color: var(--ink) !important;
+  }
+  @media (max-width: 880px) {
+    .nav-care-btn { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav>
+    <div class="logo">Norren</div>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#examples">Examples</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/care.html" class="nav-care-btn">Norren Care &#x2192;</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="beta-tag">
+        <span class="beta-dot"></span>
+        Private beta · iOS · TestFlight
+      </div>
+      <div class="eyebrow">Your second memory</div>
+      <h1>Speak it.<br>Remember it. <em>Forever.</em></h1>
+      <p class="lead">Norren is the memory you wish your brain had. Talk about your day — appointments, expenses, conversations, ideas — and it remembers everything. Months later, ask in plain English. The answer is there.</p>
+      <div class="cta-row">
+        <a href="https://tally.so/r/MePrbE" target="_blank" rel="noopener" class="btn-primary">
+          Apply for beta access
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <a href="#how" class="btn-text">See how it works →</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="orb"></div>
+      <div class="orb-shadow"></div>
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="dot dot-4"></div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="quote">
+      <blockquote>
+        Your life is full of moments you'll <em>forget</em>—unless something remembers them for you.
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="features" id="how">
+    <h2 class="section-title">A memory that <em>thinks</em><br>like you do.</h2>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-num">01 / Capture</div>
+        <h3>Just speak. It writes itself.</h3>
+        <p>Press the orb. Talk for ten seconds or ten minutes — in English, Russian, or both in the same sentence. Norren transcribes everything and quietly files it away by category.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-num">02 / Understand</div>
+        <h3>It extracts what matters.</h3>
+        <p>Dates. Amounts. Names. Symptoms. Decisions. Claude AI reads each memory the way you would, pulls out what's important, and remembers the context — not just the words.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-num">03 / Recall</div>
+        <h3>Ask anything. Find anything.</h3>
+        <p>"When was my last ultrasound?" "How much on coffee last month?" Norren answers from your own words, with dates, numbers, and context intact.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-num">04 / Reflect</div>
+        <h3>Weekly insights, written by AI.</h3>
+        <p>Every week, a quiet digest of your patterns: where your money went, who you saw, what kept coming up. Not advice. Just clarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="examples" id="examples">
+    <div class="eyebrow">What you can ask</div>
+    <h2 class="section-title">Your life,<br><em>indexed.</em></h2>
+    <p class="examples-intro">Whatever you mentioned in passing, Norren remembers. Ask it back whenever you need it.</p>
+
+    <div class="example-grid">
+      <div class="example-card">
+        <div class="example-cat">Health</div>
+        <div class="example-q">"When was the last time I had an ultrasound?"</div>
+        <div class="example-a">You had an ultrasound of your abdomen and kidneys on April 21, 2026. You mentioned it on May 15 when noting blood and urine tests on April 20.</div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-cat">Spending</div>
+        <div class="example-q">"How much on restaurants this week?"</div>
+        <div class="example-a">$2,500 across Cafes &amp; Restaurants — a 65% decrease vs last week. Pulled from your voice entries.</div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-cat">People</div>
+        <div class="example-q">"What did I give my colleague for her birthday?"</div>
+        <div class="example-a">You gave Sarah a leather notebook on March 8. You mentioned the next week that she liked it.</div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-cat">Routines</div>
+        <div class="example-q">"When did I finish my last vitamin course?"</div>
+        <div class="example-a">You finished your B-complex course on April 12. You also said you wanted to restart in June.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<section class="showcase">
+  <div class="showcase-inner">
+    <div>
+      <h2 class="section-title">Built for the moments you'd rather <em>not lose.</em></h2>
+      <p style="font-size: 17px; color: var(--ink-soft); line-height: 1.7; max-width: 480px;">
+        The trip you took. The medicine you tried. The friend you called.
+        The thought you had at 2am. Norren remembers, so you don't have to.
+      </p>
+    </div>
+
+    <div class="phone">
+      <img class="phone-screenshot" src="screen-memory.png" alt="Norren app — Speak naturally screen with 68 memories">
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <section class="privacy-sec" id="privacy">
+    <div class="eyebrow">Privacy</div>
+    <h2 class="section-title">Your memories<br>are <em>yours.</em></h2>
+
+    <div class="privacy-grid">
+      <div class="privacy-pillar">
+        <svg class="privacy-icon" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="11" width="16" height="13" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+        </svg>
+        <h3>Stored on your device.</h3>
+        <p>Every memory, transcript, and insight lives on your iPhone. Not in the cloud. Not on our servers. Not in any database we control.</p>
+      </div>
+
+      <div class="privacy-pillar">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 2"/>
+        </svg>
+        <h3>AI without identity.</h3>
+        <p>When Norren queries Claude, it sends transcript text only — never your name, account, or audio. Nothing is linked back to you.</p>
+      </div>
+
+      <div class="privacy-pillar">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+        </svg>
+        <h3>Yours to delete.</h3>
+        <p>Delete a memory and it's gone — from your device, from any cache, immediately. There's no recovery, no backup we can access.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="section-title">Free to start.<br><em>Worth it</em> to keep.</h2>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tier">Free</div>
+        <div class="price-amount">$0</div>
+        <div class="price-period">forever</div>
+        <ul class="price-features">
+          <li class="price-feature"><strong>Unlimited</strong> voice memories</li>
+          <li class="price-feature">Full calendar &amp; history</li>
+          <li class="price-feature"><strong>3</strong> AI questions, ever</li>
+        </ul>
+        <p class="price-note">Use Norren as a memory archive — no charge, no time limit.</p>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-tier">Premium</div>
+        <div class="price-amount">$6.99</div>
+        <div class="price-period">per month · or $49.99/year</div>
+        <ul class="price-features">
+          <li class="price-feature">Everything in Free</li>
+          <li class="price-feature"><strong>Unlimited</strong> AI questions about your past</li>
+          <li class="price-feature">Weekly Insights &amp; digests</li>
+          <li class="price-feature">Spending &amp; health summaries</li>
+          <li class="price-feature">"On this day" callbacks</li>
+        </ul>
+        <p class="price-note">Founding member pricing — yours stays the same as Norren grows.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-sec" id="faq">
+    <div class="eyebrow">Questions</div>
+    <h2 class="section-title">Things people<br>ask <em>first.</em></h2>
+
+    <div class="faq-list">
+      <details>
+        <summary>Is Norren a journaling app?</summary>
+        <p>Not exactly. Journals are for writing about how you feel. Norren is for remembering what happened — appointments, expenses, conversations, ideas — and finding any of it again. Think of it less like a diary and more like a search engine for your own life.</p>
+      </details>
+      <details>
+        <summary>What languages does it understand?</summary>
+        <p>English and Russian, including code-switching mid-sentence. More languages coming.</p>
+      </details>
+      <details>
+        <summary>How do I join the beta?</summary>
+        <p>Apply through the button below. We're letting in the first hundred testers gradually — when you're approved, you'll get a TestFlight invitation in your email.</p>
+      </details>
+      <details>
+        <summary>What does it cost after launch?</summary>
+        <p>Free forever with unlimited memories and 3 AI questions. Premium is $6.99/month or $49.99/year for unlimited AI and Insights. Early supporters keep founding pricing.</p>
+      </details>
+      <details>
+        <summary>Is my voice data private?</summary>
+        <p>Yes. Recordings and transcripts stay on your iPhone. AI features process transcript text only — never your audio, never linked to your identity. Full details in our Privacy Policy.</p>
+      </details>
+      <details>
+        <summary>Is there an Android version?</summary>
+        <p>Not yet. Norren is built natively for iOS first. Apply for the beta and let us know if Android matters to you.</p>
+      </details>
+      <details>
+        <summary>Who's behind this?</summary>
+        <p>One developer who wanted a search engine for his own life — and finally built one.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="final-cta" id="join">
+    <div class="eyebrow">Be early</div>
+    <h2>Become one of the first<br><em>hundred minds.</em></h2>
+    <p>The private beta opens this week. The first hundred testers shape what Norren becomes — and keep early access to every feature we build.</p>
+    <div class="cta-row">
+      <a href="https://tally.so/r/MePrbE" target="_blank" rel="noopener" class="btn-primary" id="apply-btn">
+        Apply for beta access
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+    <p class="final-cta-meta">We review applications within 48 hours.</p>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-tag">
+        Norren is your <em>second memory</em>—a quiet, private place where everything you've ever said is waiting to be found.
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="#how">How it works</a>
+        <a href="#examples">Examples</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://tally.so/r/MePrbE" target="_blank" rel="noopener">Apply for beta</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+        <a href="mailto:support@norren.app">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Norren. All rights reserved.</span>
+      <span>Made with care.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.feature, .example-card, .privacy-pillar').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
