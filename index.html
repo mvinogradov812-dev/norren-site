@@ -828,6 +828,8 @@
     .nav-links { display: none; }
     .section-title { margin-bottom: 56px; }
     .examples, .privacy-sec, .pricing, .faq-sec, .final-cta { padding: 80px 0; }
+    .care-grid { grid-template-columns: 1fr !important; }
+    .care-form-row { grid-template-columns: 1fr !important; }
     .quote-section { padding: 80px 0; }
   }
 
@@ -867,6 +869,127 @@
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     .footer-tag { font-size: 20px; }
   }
+  /* ===== Norren Care (B2B) ===== */
+  .care-sec {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+    background: var(--cream-deep);
+  }
+  .care-lead {
+    max-width: 720px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 56px;
+  }
+  .care-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    max-width: 980px;
+    margin-bottom: 64px;
+  }
+  .care-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 32px;
+  }
+  .care-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .care-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .care-card .care-icon {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: var(--teal);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .care-form-wrap {
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 28px;
+    padding: 48px;
+    max-width: 980px;
+  }
+  .care-form-wrap h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .care-form-wrap p.care-form-sub {
+    color: rgba(245, 238, 220, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 620px;
+  }
+  .care-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .care-form label {
+    display: block;
+    font-size: 13px;
+    color: rgba(245, 238, 220, 0.6);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+  .care-form input,
+  .care-form textarea {
+    width: 100%;
+    background: rgba(245, 238, 220, 0.08);
+    border: 1px solid rgba(245, 238, 220, 0.18);
+    border-radius: 14px;
+    padding: 14px 16px;
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  .care-form input:focus,
+  .care-form textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+  }
+  .care-form textarea { min-height: 96px; resize: vertical; }
+  .care-form .care-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0 28px;
+    font-size: 13px;
+    color: rgba(245, 238, 220, 0.6);
+    line-height: 1.5;
+  }
+  .care-form .care-consent input { width: auto; margin-top: 3px; }
+  .care-form .care-consent a { color: var(--teal); }
+  .care-submit {
+    background: var(--teal);
+    color: var(--ink);
+    border: none;
+    border-radius: 100px;
+    padding: 16px 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .care-submit:hover { opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -879,6 +1002,7 @@
       <a href="#how">How it works</a>
       <a href="#examples">Examples</a>
       <a href="#pricing">Pricing</a>
+      <a href="/care.html">Norren Care</a>
       <a href="#faq">FAQ</a>
       <a href="/privacy.html">Privacy</a>
     </div>
