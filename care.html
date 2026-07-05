@@ -1020,6 +1020,27 @@
     .care-hero { padding: 60px 0 70px; }
     .care-sec { padding: 70px 0 !important; }
   }
+  .dashboard-shot {
+    max-width: 920px;
+    margin: 8px auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 30px 80px -20px rgba(31,46,38,0.25);
+    background: #fff;
+  }
+  .dashboard-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .dashboard-caption {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--ink-mute);
+    font-style: italic;
+  }
 </style>
 </head>
 <body>
@@ -1064,6 +1085,16 @@
         <p>No devices to install, no staff training, no IT project. A care organisation can pilot Norren Care with a small group of patients almost immediately — low friction, low risk.</p>
       </div>
     </div>
+  </section>
+
+  <section class="care-sec" id="dashboard" style="background:var(--cream-deep);border-top:1px solid var(--line);">
+    <div class="eyebrow">The doctor's view</div>
+    <h2 class="section-title">Everything in<br><em>one screen.</em></h2>
+    <p class="care-lead">Care staff see who is following their plan, any new complaint the moment it appears, and trends over time — while personal and financial entries stay private to the patient.</p>
+    <div class="dashboard-shot">
+      <img src="dashboard.png" alt="Norren Care doctor dashboard showing medication compliance, mood signal and patient overview" loading="lazy">
+    </div>
+    <p class="dashboard-caption">A working dashboard with real metrics — no extra hardware.</p>
   </section>
 
   <section class="care-sec" id="benefits" style="background:var(--cream-deep);">
