@@ -825,7 +825,9 @@
       gap: 12px;
     }
     nav { padding: 24px 0; }
-    .nav-links { display: none; }
+    .nav-links { display: flex; gap: 0; }
+    .nav-links a:not(.nav-care-btn) { display: none; }
+    .nav-care-btn { display: inline-flex !important; margin-left: 0; font-size: 13px; padding: 8px 16px; }
     .section-title { margin-bottom: 56px; }
     .examples, .privacy-sec, .pricing, .faq-sec, .final-cta { padding: 80px 0; }
     .care-grid { grid-template-columns: 1fr !important; }
