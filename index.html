@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Norren — Your Second Memory</title>
-<meta name="description" content="Speak it. Remember it. Forever. Norren is the memory you wish your brain had — search your life by voice.">
+<meta name="description" content="Speak it. Norren remembers. Forever. Norren is the memory you wish your brain had — search your life by voice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -69,27 +69,27 @@
   .hero-quote{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-mute);font-size:15px;max-width:400px;
     padding-left:16px;border-left:2px solid var(--line);}
 
-  .phone{width:278px;height:604px;background:#05080B;border-radius:48px;padding:12px;
+  .phone{width:278px;height:578px;background:#05080B;border-radius:48px;padding:12px;
     box-shadow:0 40px 90px -20px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.04),
       0 0 70px -10px var(--teal-glow);
     position:relative;justify-self:center;transform:rotate(2deg);}
   .phone-screen{width:100%;height:100%;background:radial-gradient(ellipse at 50% 10%,#1A2A2C,#070B0D 70%);
     border-radius:38px;overflow:hidden;position:relative;display:flex;flex-direction:column;}
-  .phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:114px;height:28px;
+  .phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:112px;height:26px;
     background:#05080B;border-radius:0 0 18px 18px;z-index:5;}
   .phone-status{display:flex;justify-content:space-between;padding:14px 20px 0;font-size:11px;
     color:var(--ink-dim);font-weight:600;position:relative;z-index:4;}
   .phone-stars{position:absolute;inset:0;z-index:1;}
   .phone-stars span{position:absolute;width:2px;height:2px;border-radius:50%;background:#8FA0A8;opacity:0.5;}
-  .phone-orb-wrap{position:relative;display:flex;justify-content:center;padding-top:38px;z-index:2;}
-  .phone-orb{width:150px;height:150px;border-radius:50%;cursor:pointer;
+  .phone-orb-wrap{position:relative;display:flex;justify-content:center;padding-top:48px;z-index:2;}
+  .phone-orb{width:136px;height:136px;border-radius:50%;cursor:pointer;
     background:radial-gradient(circle at 35% 30%,#8FF2DC,var(--teal) 50%,var(--teal-dim) 100%);
-    box-shadow:0 0 50px var(--teal-glow),0 0 0 1px rgba(255,255,255,0.08);
+    box-shadow:0 0 55px var(--teal-glow),0 0 0 1px rgba(255,255,255,0.08);
     animation:ppulse 4.2s ease-in-out infinite;}
-  @keyframes ppulse{0%,100%{transform:scale(1);}50%{transform:scale(1.045);}}
-  .phone-textblock{text-align:center;padding:26px 24px 0;position:relative;z-index:2;}
-  .phone-title{color:var(--ink);font-size:17px;font-weight:700;margin-bottom:4px;}
-  .phone-sub{color:var(--ink-mute);font-size:12.5px;margin-bottom:12px;}
+  @keyframes ppulse{0%,100%{transform:scale(1);}50%{transform:scale(1.04);}}
+  .phone-textblock{text-align:center;padding:16px 22px 0;position:relative;z-index:2;}
+  .phone-title{color:var(--ink);font-size:15px;font-weight:700;margin-bottom:3px;}
+  .phone-sub{color:var(--ink-mute);font-size:11px;margin-bottom:10px;}
   .phone-wave{display:flex;gap:2px;justify-content:center;height:16px;align-items:center;}
   .phone-wave span{width:2px;border-radius:2px;background:var(--teal);opacity:0.85;animation:wave 1.3s ease-in-out infinite;}
   .phone-wave span:nth-child(odd){animation-delay:-0.9s;}
@@ -98,13 +98,13 @@
   .phone-wave span:nth-child(5){height:12px;animation-delay:-0.4s;} .phone-wave span:nth-child(6){height:6px;animation-delay:-1.0s;}
   .phone-wave span:nth-child(7){height:11px;animation-delay:-0.3s;} .phone-wave span:nth-child(8){height:5px;animation-delay:-0.7s;}
   @keyframes wave{0%,100%{transform:scaleY(0.4);}50%{transform:scaleY(1);}}
-  .phone-divider{border-top:1px solid rgba(255,255,255,0.08);margin:22px 20px 0;}
-  .phone-stats-row{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 14px;
+  .phone-divider{border-top:1px solid rgba(255,255,255,0.08);margin:32px 20px 0;}
+  .phone-stats-row{display:flex;justify-content:space-between;align-items:center;padding:11px 14px 9px;
     font-size:12px;position:relative;z-index:2;}
   .phone-stats-row .mem-count{color:var(--ink-dim);display:flex;align-items:center;gap:6px;}
   .mem-dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#E8825A,#2DBFA0);}
   .phone-stats-row .view-cal{color:var(--teal);font-weight:500;}
-  .phone-card{margin:0 20px;background:rgba(255,255,255,0.055);border-radius:14px;padding:14px 16px;
+  .phone-card{margin:0 14px;background:rgba(255,255,255,0.055);border-radius:14px;padding:14px 16px;
     position:relative;z-index:2;}
   .phone-card-top{display:flex;align-items:center;gap:9px;}
   .phone-card-dot{width:7px;height:7px;border-radius:50%;background:#B98CE0;flex-shrink:0;}
@@ -117,7 +117,7 @@
   .phone-pag span.active{width:16px;background:var(--teal);}
   .phone-pag span:not(.active){width:5px;}
   .phone-tabbar{margin-top:auto;display:flex;justify-content:space-around;align-items:center;
-    padding:16px 10px 24px;position:relative;z-index:2;}
+    padding:10px 10px 18px;position:relative;z-index:2;}
   .phone-tab{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:9.5px;color:var(--ink-mute);}
   .phone-tab.active{color:var(--teal);}
   .phone-tab-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:14px;}
@@ -188,10 +188,10 @@
 
   .price-wrap{padding-left:32px;}
   @media(max-width:880px){.price-wrap{padding-left:0;}}
-  .toggle{display:inline-flex;background:var(--bg-card);border:1px solid var(--line);border-radius:10px;
-    padding:4px;margin-bottom:36px;}
+  .toggle{display:inline-flex;background:var(--bg-raised);border:1px solid var(--line);border-radius:8px;
+    padding:3px;margin:14px 0 18px;}
   .toggle button{background:none;border:none;color:var(--ink-mute);font-family:'Inter',sans-serif;
-    font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:7px;cursor:pointer;transition:all 0.2s ease;}
+    font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:6px;cursor:pointer;transition:all 0.2s ease;}
   .toggle button.active{background:var(--teal);color:#0A1512;}
   .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:720px;}
   @media(max-width:640px){.pricing-grid{grid-template-columns:1fr;}}
@@ -201,7 +201,10 @@
     font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:5px;}
   .price-name{font-size:15px;color:var(--ink-dim);margin-bottom:6px;}
   .price-amount{font-family:'Fraunces',serif;font-size:42px;margin-bottom:2px;transition:opacity 0.15s ease;}
-  .price-period{color:var(--ink-mute);font-size:13.5px;margin-bottom:24px;}
+  .price-strike{color:var(--ink-mute);text-decoration:line-through;font-size:24px;font-weight:400;margin-right:10px;transition:opacity 0.15s ease;}
+  .price-free{color:var(--teal);}
+  .price-first100{color:var(--teal);font-size:12.5px;font-weight:600;margin-top:-2px;margin-bottom:14px;transition:opacity 0.15s ease;}
+  .price-period{color:var(--ink-mute);font-size:13.5px;margin-bottom:24px;transition:opacity 0.15s ease;}
   .price-list{list-style:none;margin-bottom:22px;}
   .price-list li{font-size:14.5px;color:var(--ink-dim);padding:8px 0;border-top:1px solid var(--line);display:flex;gap:10px;}
   .price-list li:first-child{border-top:none;}
@@ -253,9 +256,9 @@
 <header class="hero wrap">
   <div class="hero-grid">
     <div>
-      <div class="kicker"><span class="kicker-dot"></span> Free for the first 100 people · No waitlist · iOS</div>
-      <h1>Speak it.<br>Remember it. <em>Forever.</em></h1>
-      <p class="lede">Norren is the memory you wish your brain had. Talk about your day — appointments, expenses, conversations, ideas — and it remembers everything. Months later, ask in plain English. The answer is there.</p>
+      <div class="kicker"><span class="kicker-dot"></span> Launching soon · Free month for the first 100 · iOS</div>
+      <h1>Speak it.<br>Norren remembers. <em>Forever.</em></h1>
+      <p class="lede">Norren is the memory you wish your brain had. Talk about your day — appointments, expenses, conversations, ideas — and it remembers everything. Months later, just ask out loud. The answer is there.</p>
       <div class="btn-row">
         <a href="https://tally.so/r/MePrbE" class="btn-primary">Get free access</a>
         <a href="#pain" class="btn-ghost">See how it works</a>
@@ -303,15 +306,15 @@
 <section id="pain">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Sound familiar?</div>
-      <h2>Your brain isn't built <em>to remember</em> everything.</h2>
+      <div class="eyebrow">The problem</div>
+      <h2>Your brain isn't built to remember everything. <em>Sound familiar?</em></h2>
     </div>
     <div class="pain-wrap reveal">
       <div class="pain-grid">
         <div class="pain-card teal">
           <div class="pain-label">THE COST OF FORGETTING</div>
           <div class="pain-stat">2.5 days/yr</div>
-          <div class="pain-desc">The average person spends this much time every year searching for things they misplaced. Over half report being late as a result.</div>
+          <div class="pain-desc">spent every year searching for things you've misplaced — over half of people are late as a result.</div>
           <div class="pain-src">Source: Pixie Lost &amp; Found Survey</div>
         </div>
         <div class="pain-card coral">
@@ -336,7 +339,7 @@
       <div class="proc-row">
         <div class="proc-num">01</div>
         <div><h3>Just speak. It writes itself.</h3>
-        <p>Press the orb. Talk for ten seconds or ten minutes — in English, Russian, or both in the same sentence. Norren transcribes everything and quietly files it away by category.</p></div>
+        <p>Press the orb. Talk for ten seconds or ten minutes, in whatever language feels natural. Norren transcribes everything and quietly files it away by category.</p></div>
       </div>
       <div class="proc-row">
         <div class="proc-num">02</div>
@@ -346,7 +349,7 @@
       <div class="proc-row">
         <div class="proc-num">03</div>
         <div><h3>Ask anything. Find anything.</h3>
-        <p>"When was my last ultrasound?" "How much on coffee last month?" Norren answers from your own words, with dates, numbers, and context intact.</p></div>
+        <p>"When was my last ultrasound?" "How much did I spend on coffee last month?" Norren answers from your own words, with dates, numbers, and context intact.</p></div>
       </div>
       <div class="proc-row">
         <div class="proc-num">04</div>
@@ -372,12 +375,12 @@
         <div class="chat-msg a" data-a="0">You had an ultrasound of your abdomen and kidneys on April 21, 2026. You mentioned it on May 15 when noting blood and urine tests on April 20.</div>
 
         <div class="chat-tag">Spending</div>
-        <div class="chat-msg q" data-q="1">"How much on restaurants this week?"</div>
+        <div class="chat-msg q" data-q="1">"How much did I spend on restaurants this week?"</div>
         <div class="chat-thinking" data-t="1"><span></span><span></span><span></span></div>
         <div class="chat-msg a" data-a="1">$2,500 across cafes and restaurants — a 65% decrease vs last week. Pulled straight from your voice entries.</div>
 
         <div class="chat-tag">People</div>
-        <div class="chat-msg q" data-q="2">"What did I give my colleague for her birthday?"</div>
+        <div class="chat-msg q" data-q="2">"What did I give Sarah for her birthday?"</div>
         <div class="chat-thinking" data-t="2"><span></span><span></span><span></span></div>
         <div class="chat-msg a" data-a="2">You gave Sarah a leather notebook on March 8. You mentioned the next week that she liked it.</div>
 
@@ -422,10 +425,6 @@
       <p>Everything — including unlimited AI questions — is free for our first users. Premium pricing kicks in after the early access period, and you'll always know before it does.</p>
     </div>
     <div class="price-wrap reveal">
-      <div class="toggle" id="billToggle">
-        <button class="active" data-period="monthly">Monthly</button>
-        <button data-period="yearly">Yearly — save 40%</button>
-      </div>
       <div class="pricing-grid">
         <div class="price-card">
           <div class="price-name">Free</div>
@@ -441,8 +440,13 @@
         <div class="price-card premium">
           <div class="price-tag">FOUNDING PRICE</div>
           <div class="price-name">Premium</div>
-          <div class="price-amount" id="premiumPrice">$6.99</div>
-          <div class="price-period" id="premiumPeriod">per month</div>
+          <div class="toggle" id="billToggle">
+            <button class="active" data-period="monthly">Monthly</button>
+            <button data-period="yearly">Yearly</button>
+          </div>
+          <div class="price-amount" id="priceAmountWrap"><span class="price-strike" id="priceStrike">$6.99</span><span class="price-free" id="priceFree">FREE</span></div>
+          <div class="price-period" id="pricePeriod">for the first 100 people</div>
+          <div class="price-first100" id="priceThen">Then $6.99/mo — locked in forever as a founding member</div>
           <ul class="price-list">
             <li>Everything in Free</li>
             <li><b>Unlimited</b>&nbsp;AI questions about your past</li>
@@ -475,7 +479,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">How do I get access?<span class="faq-chevron">+</span></div>
-          <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Norren is free to use right now — no waitlist, no review process. Register your interest through the button below and you'll get instant access when it opens in your region.</div></div></div>
+          <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Norren is launching soon. Register your interest through the button below and, if you're among the first 100, you'll get a full month of Premium free the moment it opens.</div></div></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What does it cost after launch?<span class="faq-chevron">+</span></div>
@@ -504,7 +508,7 @@
     <h2>Become one of the first <em>hundred minds.</em></h2>
     <p>Norren is free to use right now — the first hundred users get full free access and shape what Norren becomes.</p>
     <a href="https://tally.so/r/MePrbE" class="btn-primary">Get free access</a>
-    <p style="margin-top:18px;color:var(--ink-mute);font-size:13px;">Free for early users. No credit card. No waitlist.</p>
+    <p style="margin-top:18px;color:var(--ink-mute);font-size:13px;">The first 100 people get a full free month. No spam, ever.</p>
   </div>
 </section>
 
@@ -598,22 +602,29 @@ document.querySelectorAll('#faqList .faq-item').forEach(item => {
 
 const toggle = document.getElementById('billToggle');
 if (toggle) {
-  const priceEl = document.getElementById('premiumPrice');
-  const periodEl = document.getElementById('premiumPeriod');
+  const amountWrap = document.getElementById('priceAmountWrap');
+  const periodEl = document.getElementById('pricePeriod');
+  const thenEl = document.getElementById('priceThen');
   toggle.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {
       toggle.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      priceEl.style.opacity = '0';
+      amountWrap.style.opacity = '0';
+      periodEl.style.opacity = '0';
+      thenEl.style.opacity = '0';
       setTimeout(() => {
         if (btn.dataset.period === 'yearly') {
-          priceEl.textContent = '$4.17';
-          periodEl.textContent = 'per month, billed $49.99/yr';
+          amountWrap.innerHTML = '<span class="price-free">$49.99</span>';
+          periodEl.textContent = 'per year (~$4.17/mo)';
+          thenEl.textContent = 'Founding price — locked in forever, even as Norren grows';
         } else {
-          priceEl.textContent = '$6.99';
-          periodEl.textContent = 'per month';
+          amountWrap.innerHTML = '<span class="price-strike">$6.99</span><span class="price-free">FREE</span>';
+          periodEl.textContent = 'for the first 100 people';
+          thenEl.textContent = 'Then $6.99/mo — locked in forever as a founding member';
         }
-        priceEl.style.opacity = '1';
+        amountWrap.style.opacity = '1';
+        periodEl.style.opacity = '1';
+        thenEl.style.opacity = '1';
       }, 150);
     });
   });
