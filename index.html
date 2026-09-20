@@ -134,6 +134,22 @@
   .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease;}
   .reveal.in{opacity:1;transform:translateY(0);}
 
+  .pain-wrap{padding-left:32px;}
+  @media(max-width:880px){.pain-wrap{padding-left:0;}}
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:640px){.pain-grid{grid-template-columns:1fr;}}
+  .pain-card{border-radius:16px;padding:28px 26px;}
+  .pain-card.teal{background:#12241F;border:1px solid rgba(45,191,160,0.3);}
+  .pain-card.coral{background:#241A16;border:1px solid rgba(232,130,90,0.3);}
+  .pain-label{font-size:12px;font-weight:600;letter-spacing:0.02em;margin-bottom:12px;}
+  .pain-card.teal .pain-label{color:var(--teal);}
+  .pain-card.coral .pain-label{color:var(--coral);}
+  .pain-stat{font-family:'Fraunces',serif;font-size:38px;margin-bottom:8px;}
+  .pain-card.teal .pain-stat{color:var(--teal);}
+  .pain-card.coral .pain-stat{color:var(--coral);}
+  .pain-desc{color:var(--ink-dim);font-size:14px;line-height:1.55;}
+  .pain-src{color:var(--ink-mute);font-size:11.5px;margin-top:8px;}
+
   .process{padding-left:32px;}
   @media(max-width:880px){.process{padding-left:0;}}
   .proc-row{display:grid;grid-template-columns:64px 1fr;gap:28px;padding:28px 0;
@@ -230,19 +246,19 @@
       <a href="#faq" data-nav="faq">FAQ</a>
       <a href="/care.html">Norren Care →</a>
     </div>
-    <a href="https://tally.so/r/MePrbE" class="nav-cta">Apply for beta</a>
+    <a href="https://tally.so/r/MePrbE" class="nav-cta">Get free access</a>
   </div>
 </nav>
 
 <header class="hero wrap">
   <div class="hero-grid">
     <div>
-      <div class="kicker"><span class="kicker-dot"></span> Private beta · iOS · TestFlight</div>
+      <div class="kicker"><span class="kicker-dot"></span> Free for the first 100 people · No waitlist · iOS</div>
       <h1>Speak it.<br>Remember it. <em>Forever.</em></h1>
       <p class="lede">Norren is the memory you wish your brain had. Talk about your day — appointments, expenses, conversations, ideas — and it remembers everything. Months later, ask in plain English. The answer is there.</p>
       <div class="btn-row">
-        <a href="https://tally.so/r/MePrbE" class="btn-primary">Apply for beta access</a>
-        <a href="#how" class="btn-ghost">See how it works</a>
+        <a href="https://tally.so/r/MePrbE" class="btn-primary">Get free access</a>
+        <a href="#pain" class="btn-ghost">See how it works</a>
       </div>
       <p class="hero-quote">Your life is full of moments you'll forget — unless something remembers them for you.</p>
     </div>
@@ -283,6 +299,31 @@
     </div>
   </div>
 </header>
+
+<section id="pain">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Sound familiar?</div>
+      <h2>Your brain isn't built <em>to remember</em> everything.</h2>
+    </div>
+    <div class="pain-wrap reveal">
+      <div class="pain-grid">
+        <div class="pain-card teal">
+          <div class="pain-label">THE COST OF FORGETTING</div>
+          <div class="pain-stat">2.5 days/yr</div>
+          <div class="pain-desc">The average person spends this much time every year searching for things they misplaced. Over half report being late as a result.</div>
+          <div class="pain-src">Source: Pixie Lost &amp; Found Survey</div>
+        </div>
+        <div class="pain-card coral">
+          <div class="pain-label">THE COST IN YOUR WALLET</div>
+          <div class="pain-stat">91%</div>
+          <div class="pain-desc">of people report losing money to everyday forgetfulness — a missed refund, a forgotten cancellation, a repeat purchase. Over a third lose more than $100 a year.</div>
+          <div class="pain-src">Source: TopCashback, 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="how">
   <div class="thread" style="height:100%;"></div>
@@ -377,7 +418,8 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">Pricing</div>
-      <h2>Free to start. <em>Worth it</em> to keep.</h2>
+      <h2>Free right now. <em>Worth it</em> later.</h2>
+      <p>Everything — including unlimited AI questions — is free for our first users. Premium pricing kicks in after the early access period, and you'll always know before it does.</p>
     </div>
     <div class="price-wrap reveal">
       <div class="toggle" id="billToggle">
@@ -432,8 +474,8 @@
           <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">English and Russian, including code-switching mid-sentence. More languages coming.</div></div></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How do I join the beta?<span class="faq-chevron">+</span></div>
-          <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Apply through the button below. We're letting in the first hundred testers gradually — when you're approved, you'll get a TestFlight invitation in your email.</div></div></div>
+          <div class="faq-q">How do I get access?<span class="faq-chevron">+</span></div>
+          <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Norren is free to use right now — no waitlist, no review process. Register your interest through the button below and you'll get instant access when it opens in your region.</div></div></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What does it cost after launch?<span class="faq-chevron">+</span></div>
@@ -445,7 +487,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">Is there an Android version?<span class="faq-chevron">+</span></div>
-          <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Not yet. Norren is built natively for iOS first. Apply for the beta and let us know if Android matters to you.</div></div></div>
+          <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Not yet. Norren is built natively for iOS first. Register your interest and let us know if Android matters to you.</div></div></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Who's behind this?<span class="faq-chevron">+</span></div>
@@ -460,9 +502,9 @@
   <div class="cta-band reveal">
     <div class="eyebrow" style="justify-content:center;display:flex;">Be early</div>
     <h2>Become one of the first <em>hundred minds.</em></h2>
-    <p>The private beta opens this week. The first hundred testers shape what Norren becomes — and keep early access to every feature we build.</p>
-    <a href="https://tally.so/r/MePrbE" class="btn-primary">Apply for beta access</a>
-    <p style="margin-top:18px;color:var(--ink-mute);font-size:13px;">We review applications within 48 hours.</p>
+    <p>Norren is free to use right now — the first hundred users get full free access and shape what Norren becomes.</p>
+    <a href="https://tally.so/r/MePrbE" class="btn-primary">Get free access</a>
+    <p style="margin-top:18px;color:var(--ink-mute);font-size:13px;">Free for early users. No credit card. No waitlist.</p>
   </div>
 </section>
 
@@ -478,7 +520,7 @@
       <a href="#examples">Examples</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="https://tally.so/r/MePrbE">Apply for beta</a>
+      <a href="https://tally.so/r/MePrbE">Get free access</a>
     </div>
     <div class="foot-col">
       <h4>Company</h4>
