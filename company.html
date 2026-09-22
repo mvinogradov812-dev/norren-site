@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Information — Norren</title>
+<meta name="description" content="Legal entity information for Norren, operated by TST Management Oy Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F1419; --bg-raised:#161C24; --bg-card:#1A212B;
+    --ink:#F2EFE9; --ink-dim:#B8BFC9; --ink-mute:#6E7684;
+    --teal:#2DBFA0; --line:#232A35;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--teal);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+
+  nav{padding:24px 0;border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:720px;margin:0 auto;padding:0 24px;}
+  .logo{font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--ink);text-decoration:none;}
+
+  main{padding:64px 0 80px;}
+  h1{font-family:'Fraunces',serif;font-weight:400;font-size:36px;margin-bottom:12px;letter-spacing:-0.01em;}
+  .subtitle{color:var(--ink-dim);font-size:16px;margin-bottom:48px;}
+
+  .info-card{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:32px 34px;margin-bottom:24px;}
+  .info-row{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line);}
+  .info-row:first-child{border-top:none;}
+  @media(max-width:560px){.info-row{grid-template-columns:1fr;gap:4px;}}
+  .info-label{color:var(--ink-mute);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;}
+  .info-value{color:var(--ink);font-size:15px;}
+
+  .note{color:var(--ink-dim);font-size:14.5px;line-height:1.65;margin-top:32px;}
+
+  footer{padding:32px 0;border-top:1px solid var(--line);margin-top:40px;}
+  .foot-links{display:flex;gap:24px;color:var(--ink-mute);font-size:13.5px;}
+  .foot-links a{color:var(--ink-dim);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Norren</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1>Company Information</h1>
+  <p class="subtitle">Legal entity details for Norren.</p>
+
+  <div class="info-card">
+    <div class="info-row">
+      <div class="info-label">Product</div>
+      <div class="info-value">Norren — an AI-powered voice-first memory platform, available as a consumer iOS app and a B2B dashboard for care organisations (Norren Care).</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Operated by</div>
+      <div class="info-value">TST Management Oy Ltd</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Business ID</div>
+      <div class="info-value">2723375-2</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Registered address</div>
+      <div class="info-value">Vuorikatu 16 A 10, 00100 Helsinki, Finland</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Country</div>
+      <div class="info-value">Finland</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Contact</div>
+      <div class="info-value"><a href="mailto:info@norren.app">info@norren.app</a></div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">Website</div>
+      <div class="info-value"><a href="https://norren.app">norren.app</a></div>
+    </div>
+  </div>
+
+  <p class="note">
+    "Norren" is a product brand operated by TST Management Oy Ltd, a company registered in Finland. TST Management Oy Ltd is the legal entity responsible for the Norren product, including the consumer iOS app and the Norren Care platform for care organisations, and is the contracting party for all agreements, subscriptions, and services offered under the Norren brand.
+  </p>
+</main>
+
+<footer>
+  <div class="wrap foot-links">
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+  </div>
+</footer>
+
+</body>
+</html>
